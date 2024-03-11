@@ -19,7 +19,7 @@
 
 .header{
     display: flex;
-    justify-content: space-between;
+    flex-direction: row-reverse;
     margin: 0px 150px 0px 150px;
     padding-top: 10px;    
 }

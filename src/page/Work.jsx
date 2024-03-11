@@ -15,14 +15,16 @@ const data = [
     img: img1,
     year: 2020,
     type: 'Dashboard',
-    body:'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.'
+    body:'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
+    path: '1'
   },
   {
     titel: 'Vibrant Portraits of 2020',
     img: img2,
     year: 2018,
     type: 'Illustration',
-    body:'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.'
+    body:'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
+    path: '/#'
 
   },
   {
@@ -30,14 +32,16 @@ const data = [
     img: img3,
     year: 2018,
     type: 'Typography',
-    body:'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.'
+    body:'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
+    path: '/#'
   },
   {
     titel: 'Components',
     img: img4,
     year: 2018,
     type: 'Components, Design',
-    body:'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.'
+    body:'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
+    path: '/#'
   },
 
 ]
@@ -46,7 +50,6 @@ function Work() {
   return (
     <div className="wrapper-work" >
         <div className="header">
-                <NavLink to={`/login`}>Sigi in</NavLink>
                 <div>
                 <NavLink to={`/work`}>Works</NavLink>
                 <NavLink to={`/blog`}>Blog</NavLink>

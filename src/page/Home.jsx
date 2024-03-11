@@ -55,7 +55,6 @@ import Footer from '../components/Footer';
     return (
     <div className="Home">
         <div className="header">
-                <NavLink to={`/login`}>Sigi in</NavLink>
                 <div>
                 <NavLink to={`/work`}>Works</NavLink>
                 <NavLink to={`/blog`}>Blog</NavLink>

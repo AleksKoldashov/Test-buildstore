@@ -9,7 +9,7 @@ function FormReg() {
   const dispatch = useDispatch()
   const [email, setEmail] = useState('')
   const [password, setPass] = useState('')
-  const {push} = useNavigate()
+  const navigate =  useNavigate ()
 
   const handelReg =(email,password)=>{
     const auth = getAuth();
@@ -21,34 +21,38 @@ function FormReg() {
                           id: user.uid,
                           token: user.accessToken
                     }))
-                  push('/')
+                    navigate('/')
           }))
            .catch(console.error)
  }
     return (
         <div className="form-container">
-          <form action="" method="post" id="register">
-                <h2>Регистрация</h2>
+                   <div className="form">
+                <h1>Войти</h1>
+                <div className="mail">
+                <h3>
+                    Введите адрес электронной почты
+                </h3>
                 <input 
-                type="email" 
-                name="login" 
-                id="login" 
-                class="input__text" 
-                placeholder="email"
+                type='mail'
                 value={email}
                 onChange={(e)=>setEmail(e.target.value)}
                 />
-                <input 
-                type="password"
-                name="password" 
-                class="input__text" 
-                placeholder="Password"
+                </div>
+                <div className="pass">
+                <h3>
+                    Введите пароль
+                </h3>
+                <input
+                type='password'
                 value={password}
                 onChange={(e)=>setPass(e.target.value)}
                 />
+                </div>
+                
+                <button onClick={()=> handelReg(email,password)}>Регистрация</button> 
 
-             </form>
-             <button onClick={()=> handelReg(email,password)}>Регистрация</button>
+          </div>
         </div>
     )
         

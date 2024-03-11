@@ -1,5 +1,5 @@
 import '../components/styles/CardMedia.css'
-
+import { NavLink } from 'react-router-dom';
 
 export default function CardMedia ({item}){
 
@@ -11,7 +11,7 @@ export default function CardMedia ({item}){
                 <img alt='img' src={item.img}/>
             </div>
             <div className="left">
-            <h2>{item.titel}</h2>
+            <NavLink to={`/work/${item.path}`} style={{fontSize:'20px'}}>{item.titel}</NavLink>
             <div style={{display:'flex', marginLeft:'20px'}}>
                 <div className="year">
                     {item.year}    

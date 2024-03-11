@@ -1,14 +1,21 @@
 import './App.css';
-import Blog from './page/Blog';
+import FormLogin from './components/FormLogin';
+import { useAuth } from './hooks/use-auth';
 import Home from './page/Home';
+import {useDispatch } from 'react-redux';
 
 
 function App() {
-  return (
+  const dispatch = useDispatch()  
+const {isAuth, email}= useAuth()
+
+  return isAuth ? (
     <div className="App">
-    <Home/>
+      <Home/>
     </div>
-  );
+  ) : (
+    <div><FormLogin/></div>
+  )
 }
 
 export default App;

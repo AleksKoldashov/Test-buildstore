@@ -4,13 +4,14 @@ import { useState } from 'react';
 import {useDispatch } from 'react-redux';
 import { setUser } from '../redux/Slicer/userSlicer';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
-function FormAuth() {
+function FormLogin() {
    const dispatch = useDispatch()
     const [email, setEmail] = useState('')
     const [password, setPass] = useState('')
-    const {push} = useNavigate()
+    const navigate =  useNavigate ()
+  
     const handelLogin =(email,password)=>{
        const auth = getAuth();
        signInWithEmailAndPassword(auth, email, password)
@@ -21,40 +22,45 @@ function FormAuth() {
                       id: user.uid,
                       token: user.accessToken
                 }))
-              push('/')
+                navigate('/')
       }))
               .catch(console.error)
     }
     return (
         <div className="form-container">
-             <form action="" method="post" id="auth">
-                <h2>Login</h2>
+          <div className="form">
+                <h1>Войти</h1>
+                <div className="mail">
+                <h3>
+                    Введите адрес электронной почты
+                </h3>
                 <input 
-                type="email" 
-                name="login" 
-                id="login" 
-                class="" 
-                placeholder="email"
+                type='mail'
                 value={email}
                 onChange={(e)=>setEmail(e.target.value)}
                 />
-                <input 
-                type="password"
-                name="password" 
-                id="password"
-                placeholder="Password"
+                </div>
+                <div className="pass">
+                <h3>
+                    Введите пароль
+                </h3>
+                <input
+                type='password'
                 value={password}
                 onChange={(e)=>setPass(e.target.value)}
-                  />
-                <input type="submit" value="Войти" onClick={()=> handelLogin(email,password)}/>
-                <h6>Не зарегистрированы? <NavLink to={`/reg`}>Перейти к регистрации</NavLink></h6> 
-            </form> 
-            
+                />
+                </div>
+                
+                <button onClick={()=> handelLogin(email,password)}>Войти</button>
+                <h6>Не зарегистрированы? <NavLink to={`/reg`}>Перейти к регистрации</NavLink></h6>    
+
+          </div>
+                
         </div>
     )
         
     
   }
   
-  export default FormAuth;
+  export default FormLogin;
   

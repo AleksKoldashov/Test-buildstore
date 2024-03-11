@@ -13,6 +13,7 @@ import {Provider} from 'react-redux';
 import { store } from './redux/store/store.js';
 import FormReg from './components/FormReg.jsx';
 import './firebase'
+import WorkDetail from './page/work/WorkDetail.jsx';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
   {
     path: "/work",
     element: <Work/>,
+  },
+  {
+    path: "/work/1",
+    element: <WorkDetail/>,
   },
   {
     path: "/login",
