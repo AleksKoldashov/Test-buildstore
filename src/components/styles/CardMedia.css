@@ -1,0 +1,18 @@
+.wrapper-card{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.left {
+    margin-left: 20px;
+}
+
+.year{
+    background-color: rgba(20, 40, 80, 1);
+    width: 62px;
+    height: 25px;
+    border-radius: 16px;
+    color: white;
+    display: flex;
+    justify-content: center;
+}

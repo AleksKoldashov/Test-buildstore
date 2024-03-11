@@ -1,0 +1,78 @@
+.Home{
+    box-sizing: border-box;
+    max-width: 1200px;
+    height: 2135px;
+    margin: 0px 100px 0px 100px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.Home a {
+    text-decoration: none;
+    margin-left: 30px;
+    margin-right: 30px;
+    color: black;
+    font-size: 1rem ;
+    font-weight:700;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 150px 0px 150px;
+    padding-top: 10px;    
+}
+.header button{
+    width: 108px;
+    height: 25px;
+    background-color: rgb(9, 245, 9);
+    border-color: white;
+}
+
+.header-content{
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.5rem;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.avatar {
+    margin-left: 100px;
+}
+
+.btn_download{
+    width: 208px;
+    height: 47px;
+    background-color: rgba(255, 100, 100, 1);
+    color: white;
+}
+
+.recept_post{
+    margin-top: 50px;
+    width: 100%;
+    background-color: rgba(237, 247, 250, 1);
+}
+.recept_heder{
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 10px;
+}
+.recept_heder a{
+    color: rgba(0, 168, 204, 1);
+}
+.card{
+    display: flex;
+    margin: 30px 150px; 
+    padding-bottom: 30px;
+}
+
+.card-media{
+    margin: 30px 150px;
+}

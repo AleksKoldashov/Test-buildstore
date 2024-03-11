@@ -1,0 +1,28 @@
+.wrapper-work{
+    box-sizing: border-box;
+    max-width: 1200px;
+    min-height: 1261px;
+    margin: 0px 100px 0px 100px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 150px 0px 150px;
+    padding-top: 10px;    
+}
+.work-body{
+    margin-top: 50px;
+    margin-left: 150px;
+}
+.wrapper-work a{
+    text-decoration: none;
+    margin-left: 30px;
+    margin-right: 30px;
+    color: black;
+    font-size: 1rem ;
+    font-weight:700;
+}

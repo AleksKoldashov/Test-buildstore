@@ -1,0 +1,26 @@
+.Card{
+    background-color: white;
+    width: 420px;
+    height: 300px;
+    margin-left: 20px;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+.Header{
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.title {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.title span {
+    margin-left: 20px;
+}
+.body{
+    margin-top: 20px; 
+    line-height: 26px;
+}
